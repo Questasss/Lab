@@ -1,0 +1,155 @@
+/* 引入 Google 字体 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* CSS 变量：统一配色 */
+:root {
+  --primary: #2e7d32;
+  --primary-dark: #1b5e20;
+  --primary-light: #c8e6c9;
+  --bg: #f1f3f4;
+  --white: #ffffff;
+  --gray: #9e9e9e;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --radius: 10px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--primary-dark);
+}
+
+header {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 1.5em 2em;
+  text-align: center;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: var(--white);
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: var(--primary-light);
+}
+
+main {
+  padding: 3em 2em;
+  max-width: 960px;
+  margin: 40px auto;
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* 按钮样式 */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 1em;
+}
+
+.button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Todo List 样式 */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: var(--radius);
+  padding: 0.8em 1em;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+}
+
+li:hover {
+  transform: scale(1.01);
+}
+
+/* 表单样式 */
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  width: 70%;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+footer {
+  background-color: var(--primary-light);
+  text-align: center;
+  padding: 1.5em;
+  color: var(--primary-dark);
+  font-size: 0.95em;
+  margin-top: 60px;
+  border-top: 1px solid #81c784;
+}
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.product-list li {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 100, 0, 0.08);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.product-list li:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 100, 0, 0.15);
+}
+
+.product-list h3 {
+  margin: 15px 0 8px;
+  font-size: 1.2rem;
+  color: #2e7d32;
+}
+
+.product-list p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+}
+
